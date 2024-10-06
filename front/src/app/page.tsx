@@ -1,100 +1,63 @@
-import Image from "next/image";
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import NavBar from '../components/NavBar/NavBar';
+import { Carrusel } from '@/components/Carrusel/Carrusel';
+import { FjallaOne } from './layout';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <NavBar />
+      <Head>
+        <title>Mi Portafolio</title>
+        <meta name="description" content="Portafolio de Juan Carlos Castillo" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="">
+
+        <section className='flex w-[full] h-[full] bg-black justify-center items-center '>
+          <div className='bg-gray-600 h-[92vh] w-[50vw]'></div>
+          <div className='bg-azulM h-[92vh] w-[50vw]'></div>
+
+          <div className='flex absolute  h-[70vh] w-[70vw] justify-center'>
+            <div className='flex w-[20vw] h-[20vw] bg-azulM justify-center items-center rounded-full overflow-hidden border-2 border-gray-600'>
+              <img className="relative object-cover w-[30vw] h-[30vw] " src="https://res.cloudinary.com/dfktz8zkt/image/upload/v1727401435/WhatsApp_Image_2024-05-24_at_10.31.54_PM-fotor-bg-remover-20240926224323_ssbcug.png" />
+            </div>
+              <h2 className={`${FjallaOne.className} text-azulM absolute left-[21vw] top-[25vw] text-[4vw]`}>FullStack </h2>
+              <h2 className={`${FjallaOne.className} text-gray-600 absolute right-[19vw] top-[25vw] text-[4vw]`}> Developer</h2>
+          </div>
+        </section>
+
+        {/* Sobre mí */}
+        <section id="sobre-mi" className="py-10">
+          <h2 className="text-2xl font-semibold mb-4">Sobre mí</h2>
+          <p className="text-gray-300">
+            Soy un desarrollador fullstack con experiencia en tecnologías como JavaScript,
+            TypeScript, React, NestJS y PostgreSQL. Me apasiona construir soluciones efectivas y optimizadas.
+          </p>
+        </section>
+
+
+
+        {/* Proyectos */}
+        <section id="proyectos" className="py-10">
+          <Carrusel />
+        </section>
+
+        {/* Contacto */}
+        <section id="con" className="py-10">
+          <h2 className="text-2xl font-semibold mb-4">Contacto</h2>
+          <p className="text-gray-300">Si estás interesado en trabajar conmigo o tienes alguna pregunta, no dudes en contactarme:</p>
+          <Link href="mailto:miemail@example.com" className="text-blue-500 mt-2 block">
+            miemail@example.com
+          </Link>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="text-center py-6 bg-gray-400">
+        <p className="text-gray-800">&copy; 2024 Juan Carlos Castillo - Todos los derechos reservados</p>
       </footer>
     </div>
   );
