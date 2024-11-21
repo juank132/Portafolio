@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Fjalla_One
-} from 'next/font/google'
+import { Fjalla_One} from 'next/font/google'
 import localFont from "next/font/local";
 import "./globals.css";
 
