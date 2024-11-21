@@ -1,11 +1,9 @@
 'use client'
 import { useEffect, useState } from "react";
 import Slider from "react-slick";
-import Link from "next/link";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Card from "../Cards/CardsCarrusel";
-import BouncingDotsLoader from "@/ui/animacion";
 
 // Botón personalizado "Prev"
 const PrevArrow = (props: any) => {
