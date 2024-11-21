@@ -1,9 +1,15 @@
 import Head from 'next/head';
 import NavBar from '../components/NavBar/NavBar';
-import { FjallaOne } from './layout';
 import Link from 'next/link';
+import { Fjalla_One} from 'next/font/google'
 import { Carrusel } from '@/components/Carrusel/Carrusel';
 import { CoverParticles } from '@/components/CoverParticles/cover-particles';
+
+
+export const FjallaOne = Fjalla_One({
+  subsets: ['latin'],
+  weight: '400'
+})
 
 export default function Home() {
   return (

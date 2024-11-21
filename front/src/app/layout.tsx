@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Fjalla_One} from 'next/font/google'
 import localFont from "next/font/local";
 import "./globals.css";
 
-export const FjallaOne = Fjalla_One({
-  subsets: ['latin'],
-  weight: '400'
-})
+
 
 
 const geistSans = localFont({
