@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -7,22 +6,19 @@ interface CardProps {
   src: string;
   name: string;
   alt: string;
-  price: number;
-
+  href: string;
 }
 
-const Card: React.FC<CardProps> = ({ src, name, alt, price }) => {
+const Card: React.FC<CardProps> = ({ src, name, alt, href }) => {
   return (
-    <div className="border p-4 rounded-lg">
-              <Image src="/proyecto1.png" alt="Proyecto 1" width={300} height={200} />
-              <h3 className="text-xl font-semibold mt-2">{name}</h3>
-              <p className="text-gray-300">
-              {alt}
-              </p>
-              <Link href="https://github.com/mi-proyecto" className="text-blue-500 mt-2 block" target="_blank">
-                Ver en GitHub
-              </Link>
-            </div>
+    <Link 
+      href={href} className="flex flex-col relative items-center ml-auto mr-auto bg-white border border-gray-200 rounded-[15px] shadow md:flex-row md:max-w-6xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-200 transform hover:scale-105">
+      <img className="object-cover w-full h-[40vw] rounded-t-lg md:h-[30vw] md:w-[1500px] md:rounded-none md:rounded-s-lg" src={src} alt="" />
+      <div className="flex flex-col justify-between p-4 leading-normal">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{name}</h5>
+        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{alt}</p>
+      </div>
+    </Link>
   );
 };
 

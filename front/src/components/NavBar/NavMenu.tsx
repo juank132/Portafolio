@@ -23,36 +23,28 @@ export const NavMenu: React.FC = () => {
 
     return (
         <nav>
-            <ul className= {`${isScrolled ? "flex space-x-10 justify-center ml-[15vw] mr-[10vw]" : "flex space-x-10 justify-end ml-[15vw] mr-[10vw] " }`}>
+            <ul className= {`${isScrolled ? "flex space-x-10 justify-center ml-[15vw] mr-[10vw] font-bold" : "flex space-x-10 justify-end ml-[15vw] mr-[10vw] font-bold " }`}>
                 <li>
-                    <Link className={`${isScrolled ? " text-gray2 transition duration-200 hover:text-white " : " text-gray2 transition duration-200 hover:text-gray1 "}`}
-                        href={{
-                            pathname: '/',
-                        }}>
+                    <Link className={`${isScrolled ? " text-gray-300 mr-[3vw] transition duration-200 hover:text-yellow-500 " : " text-gray-300 transition mr-[3vw] duration-200 hover:text-gray-500 "}`}
+                        href='#inicio'>
                         INICIO
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${isScrolled ? " text-gray2 transition duration-200 hover:text-white " : " text-gray2 transition duration-200 hover:text-gray1 "}`}
+                    <Link className={`${isScrolled ? " text-gray-300 mr-[3vw] transition duration-200 hover:text-yellow-500 " : " text-gray-300 transition mr-[3vw] duration-200 hover:text-gray-500 "}`}
                         href={{
-                            pathname: '/about',
+                            pathname: '/about_me',
                         }}>
                         SOBRE MI
                     </Link>
                 </li>
                 <li>
-                    <Link className={`${isScrolled ? " text-gray2 transition duration-200 hover:text-white " : " text-gray2 transition duration-200 hover:text-gray1 "}`}
+                    <Link className={`${isScrolled ? " text-gray-300 mr-[3vw] transition duration-200 hover:text-yellow-500 " : " text-gray-300 transition mr-[3vw] duration-200 hover:text-gray-500 "}`}
                         href= '#proyectos'>
                         PROYECTOS
                     </Link>
                 </li>
-                <li>
-                <Link className={`${isScrolled ? " text-gray2 transition duration-200 hover:text-white " : " text-gray2 transition duration-200 hover:text-gray1 "}`}
-                        href='#con'
-                        >
-                        CONTACTO
-                    </Link>
-                </li>
+
 
             </ul>
         </nav>

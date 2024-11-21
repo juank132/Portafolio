@@ -23,7 +23,7 @@ export default function NavBar() {
     }, []);
     
     return (
-        <section className={`sticky text-[.9em] top-0 py-[1.2vw] z-10 transition-colors duration-300 ${isScrolled ? 'bg-azulM text-white' : 'bg-azulM text-black'}`}>
+        <section className={`sticky text-[1em] top-0 py-[1.3vw] z-10 transition-colors duration-300 shadow-xl ${isScrolled ? 'bg-gray-900 text-white' : 'bg-azulM text-black'}`}>
             <NavMenu />
         </section>
     )
