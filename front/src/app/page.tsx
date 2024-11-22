@@ -1,3 +1,4 @@
+'use client';
 import Head from 'next/head';
 import NavBar from '../components/NavBar/NavBar';
 import Link from 'next/link';
@@ -6,10 +7,7 @@ import { Carrusel } from '@/components/Carrusel/Carrusel';
 import { CoverParticles } from '@/components/CoverParticles/cover-particles';
 
 
-export const FjallaOne = Fjalla_One({
-  subsets: ['latin'],
-  weight: '400'
-})
+const FjallaOne = Fjalla_One({ subsets: ['latin'], weight: '400' });
 
 export default function Home() {
   return (
