@@ -59,7 +59,7 @@ export default function Home() {
             </div>
           </Link>
 
-          <Link href="././CV_Castillo_Juan_Carlos.pdf" download>
+          <Link href="././cv_22052024 (4).pdf" download>
             <div className={`${FjallaOne.className} flex absolute items-center text-gray-900 p-[1.5vw] pr-[7.5vw] pl-[1.5vw] left-[25.6vw] top-[39vw] bg-yellow-500 border-2 border-yellow-500 rounded-[20px] transition duration-200 transform hover:scale-110`}>
               <p className='absolute text-[1.1vw]'>DESCARGAR CV</p>
             </div>
